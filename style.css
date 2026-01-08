@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'VT323', monospace;
+  background: #ffd6ec;
+  overflow-x: hidden;
+  image-rendering: pixelated;
+}
+
+.pixel { image-rendering: pixelated; }
+
+.hidden { display: none; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.card {
+  background: rgba(255,240,250,0.9);
+  border: 3px solid #ffafcc;
+  margin: 12px;
+  padding: 12px;
+}
+
+button {
+  background: #ffafcc;
+  border: 2px solid #b5838d;
+  padding: 8px;
+  font-family: inherit;
+}
+
+#authScreen {
+  position: fixed;
+  inset: 0;
+  background: #ffd6ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  border: 4px solid #ffafcc;
+  padding: 20px;
+  background: #fff0f8;
+}
+
+/* PARALLAX FOREST */
+.forest-layer {
+  position: fixed;
+  inset: 0;
+  background-repeat: repeat-x;
+  animation: scroll 120s linear infinite;
+  pointer-events: none;
+}
+
+.back {
+  background-image: url("https://i.imgur.com/LhQ4FQk.png");
+  opacity: 0.4;
+}
+
+.mid {
+  background-image: url("https://i.imgur.com/5FZ6Z9O.png");
+  animation-duration: 80s;
+}
+
+.front {
+  background-image: url("https://i.imgur.com/8vH1ZrN.png");
+  animation-duration: 40s;
+}
+
+@keyframes scroll {
+  from { background-position-x: 0; }
+  to { background-position-x: -2000px; }
+}
