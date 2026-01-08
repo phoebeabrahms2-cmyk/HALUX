@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fairy BTC Grove</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="sprites.css">
+</head>
+
+<body>
+<div id="authScreen">
+  <div class="auth-card pixel">
+    <h1>🧚 Fairy BTC Grove</h1>
+    <button onclick="authenticate()">Unlock with Face ID</button>
+    <p id="authMsg"></p>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <audio id="lofi" loop src="https://cdn.pixabay.com/audio/2023/03/09/audio_9f5c5a96d1.mp3"></audio>
+  <audio id="uiSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_8bfc6e2c1f.mp3"></audio>
+
+  <div class="forest-layer back"></div>
+  <div class="forest-layer mid"></div>
+  <div class="forest-layer front"></div>
+
+  <header>
+    <h1>🌸 BTC Grove</h1>
+    <button onclick="toggleMusic()">🎧</button>
+  </header>
+
+  <div class="pixel-cat idle"></div>
+
+  <section class="card pixel">
+    <h2>Bitcoin</h2>
+    <p id="btcPrice">Loading...</p>
+  </section>
+
+  <section class="card pixel">
+    <input type="date" id="buyDate">
+    <input type="number" id="btcAmount" step="0.0001" placeholder="BTC amount">
+    <button onclick="addInvestment()">✨ Add Investment</button>
+    <ul id="investmentList"></ul>
+    <p id="result"></p>
+  </section>
+</div>
+
+<script src="crypto.js"></script>
+<script src="webauthn.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
