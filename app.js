@@ -1,3 +1,24 @@
+const PASSWORD = "Godlovesyou321!";
+
+function unlock() {
+  const input = document.getElementById("passwordInput").value;
+  const error = document.getElementById("lockError");
+  const chime = document.getElementById("chime");
+
+  if (input === PASSWORD) {
+    chime.currentTime = 0;
+    chime.play();
+
+    setTimeout(() => {
+      document.getElementById("lockScreen").style.display = "none";
+      document.getElementById("app").classList.remove("hidden");
+      fetchCurrentPrice();
+    }, 300); // small delay so chime feels intentional
+  } else {
+    error.innerText = "Incorrect password";
+  }
+}
+
 const btcPriceEl = document.getElementById("btcPrice");
 const list = document.getElementById("investmentList");
 const uiSound = document.getElementById("uiSound");
