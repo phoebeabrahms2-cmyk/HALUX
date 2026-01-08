@@ -1,0 +1,15 @@
+{
+  "name": "Fairy BTC Grove",
+  "short_name": "BTC Grove",
+  "display": "standalone",
+  "background_color": "#ffd6ec",
+  "theme_color": "#ffafcc",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/616/616408.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
