@@ -70,6 +70,18 @@ button {
   background-image: url("https://i.imgur.com/8vH1ZrN.png");
   animation-duration: 40s;
 }
+.lock-card {
+  background: rgba(255, 240, 250, 0.9);
+  border-radius: 24px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+#lockError {
+  color: #b00020;
+  margin-top: 8px;
+}
 
 @keyframes scroll {
   from { background-position-x: 0; }
