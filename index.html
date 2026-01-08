@@ -3,46 +3,38 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Fairy BTC Grove</title>
+<title>Hallux</title>
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="sprites.css">
 </head>
 
 <body>
+
+<!-- LOCK SCREEN -->
 <div id="lockScreen">
   <div class="lock-card">
-    <h1>🌸 Fairy Grove</h1>
+    <h1>🌸 Hallux</h1>
     <p>Enter password</p>
-
-    <input
-      type="password"
-      id="passwordInput"
-      placeholder="••••••••••"
-    />
-
+    <input type="password" id="passwordInput" placeholder="••••••••••"/>
     <button onclick="unlock()">✨ Enter</button>
-
     <p id="lockError"></p>
-
-    <!-- Soft chime -->
     <audio id="chime" preload="auto">
       <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_9a6c5f5c8b.mp3" type="audio/mpeg">
     </audio>
   </div>
 </div>
 
-
+<!-- MAIN APP -->
 <div id="app" class="hidden">
   <audio id="lofi" loop src="https://cdn.pixabay.com/audio/2023/03/09/audio_9f5c5a96d1.mp3"></audio>
-  <audio id="uiSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_8bfc6e2c1f.mp3"></audio>
 
   <div class="forest-layer back"></div>
   <div class="forest-layer mid"></div>
   <div class="forest-layer front"></div>
 
   <header>
-    <h1>🌸 BTC Grove</h1>
+    <h1>🌸 Hallux</h1>
     <button onclick="toggleMusic()">🎧</button>
   </header>
 
@@ -63,7 +55,7 @@
 </div>
 
 <script src="crypto.js"></script>
-<script src="webauthn.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
+
